@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Object Detection with React and TensorFlow.js
 
-## Available Scripts
+This project demonstrates real-time object detection in the browser using React, TensorFlow.js, and the COCO-SSD model. The application leverages the webcam feed to identify objects and displays bounding boxes around them. This implementation is inspired by [Nicolas Renotte's tutorials](https://www.youtube.com/c/NicolasRenotte).
 
-In the project directory, you can run:
+## Features
+- Real-time object detection using the COCO-SSD model.
+- Integration with TensorFlow.js for browser-based machine learning.
+- Clean and responsive UI with webcam and canvas elements.
 
-### `yarn start`
+## Technologies Used
+- **React**: For building the user interface.
+- **TensorFlow.js**: For loading and running the COCO-SSD model.
+- **COCO-SSD Model**: Pre-trained model for object detection.
+- **Webcam**: For capturing video input in real-time.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/object-detection-app.git
+   cd object-detection-app
+   ```
 
-### `yarn test`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### `yarn build`
+4. Open your browser and navigate to `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## File Structure
+```
+.
+├── public
+├── src
+│   ├── App.js         # Main React component
+│   ├── App.css        # Styling for the app
+│   ├── utilities.js   # Utility functions like drawing bounding boxes
+│   ├── index.js       # Entry point of the React app
+│   └── assets         # Images or other assets (if needed)
+├── package.json       # Project configuration and dependencies
+└── README.md          # Documentation
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## How It Works
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Load TensorFlow.js and COCO-SSD**:
+   The app uses TensorFlow.js to load the COCO-SSD model. TensorFlow.js provides compatibility with browser environments, enabling machine learning directly in the client.
 
-### `yarn eject`
+2. **Webcam Integration**:
+   The app uses the `react-webcam` library to capture live video from the user's webcam.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Object Detection**:
+   The COCO-SSD model runs inference on the video feed to detect objects in real-time. Detected objects are drawn on a canvas overlay using bounding boxes and labels.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Bounding Box Rendering**:
+   The `drawRect` function in `utilities.js` handles rendering bounding boxes and object labels over the webcam feed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Open the app in your browser.
+- Grant permission to access the webcam.
+- The app will display the webcam feed and detect objects in real-time.
+- Detected objects will appear with bounding boxes and labels.
 
-## Learn More
+## Known Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Performance**: Detection might be slower on older devices or browsers without WebGL support.
+- **Model Loading Error**: Ensure a stable internet connection for downloading the COCO-SSD model. If issues persist, consider hosting the model locally.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Inspiration
+This project was inspired by Nicolas Renotte's tutorials on machine learning and computer vision. Check out his [YouTube channel](https://www.youtube.com/c/NicolasRenotte) for more great content.
 
-### Code Splitting
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Acknowledgments
+- [TensorFlow.js](https://www.tensorflow.org/js): For making machine learning in the browser possible.
+- [Nicolas Renotte](https://www.youtube.com/c/NicolasRenotte): For inspiring this project.
 
-### Analyzing the Bundle Size
+Feel free to contribute to this project or use it as a starting point for your own object detection application!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Connect with Me
+- **LinkedIn**: [Prisha Prakash](www.linkedin.com/in/prisha-prakash-950816297)
+- **Email**: prishaprakash9903@gmail.com
