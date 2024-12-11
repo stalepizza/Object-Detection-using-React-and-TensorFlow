@@ -86,5 +86,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 Feel free to contribute to this project or use it as a starting point for your own object detection application!
 
 ## Connect with Me
-- **LinkedIn**: [Prisha Prakash](www.linkedin.com/in/prisha-prakash-950816297)
+- **LinkedIn**: [Prisha Prakash](https://www.linkedin.com/in/prisha-prakash-950816297/)
 - **Email**: prishaprakash9903@gmail.com
